@@ -1,4 +1,3 @@
-// I'm a comment!
 // SPDX-License-Identifier: MIT
 
 pragma solidity 0.8.8;
@@ -7,22 +6,31 @@ pragma solidity 0.8.8;
 
 contract SimpleStorage {
 
+    // Solidity standard types: bool, uint (unsigned int), int, address, bytes
+    // Examples: 
+    // bool hasFavoriteNumber = true;
+    // uint256 favoriteNumber = 5; 
+    // string favoriteNumberInText = "Five"; // stored as a bytes object
+    // int256 = -5;
+    // address myAddress = 0x3868f192D05d5A4A875f440BF31C0232bbd8d5F9;
+    // bytes32 favoriteBytes = "cat"; // Maximum size 32
+
     uint256 favoriteNumber;
+
+    mapping(string => uint256) public nameToFavoriteNumber;
 
     struct People {
         uint256 favoriteNumber;
         string name;
     }
-    // uint256[] public anArray;
+
     People[] public people;
 
-    mapping(string => uint256) public nameToFavoriteNumber;
-
-    function store(uint256 _favoriteNumber) public {
+    function store(uint256 _favoriteNumber) public { 
         favoriteNumber = _favoriteNumber;
     }
-    
-    function retrieve() public view returns (uint256){
+
+    function retrieve() public view returns(uint256) {
         return favoriteNumber;
     }
 
