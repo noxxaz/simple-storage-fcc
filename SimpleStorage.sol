@@ -7,7 +7,6 @@ pragma solidity 0.8.8;
 contract SimpleStorage {
 
     // Solidity standard types: bool, uint (unsigned int), int, address, bytes
-    // Examples: 
     // bool hasFavoriteNumber = true;
     // uint256 favoriteNumber = 5; 
     // string favoriteNumberInText = "Five"; // stored as a bytes object
@@ -39,4 +38,3 @@ contract SimpleStorage {
         nameToFavoriteNumber[_name] = _favoriteNumber;
     }
 }
-
